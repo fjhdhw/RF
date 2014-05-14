@@ -1,0 +1,14 @@
+html{background: url(../img/pc/bg.jpg);background-size: cover;}
+body{min-width: 1024px;}
+#header{height: 160px;background: #000c04;position: fixed;line-height: 124px;width: 100%;min-width: 1024px;}
+#header .logo{background: url(../img/pc/icon.png);width: 205px;height: 124px;float:left;}
+#header ul{float:left;color:#44644b;}
+#header li{float:left;padding: 0 20px;}
+#header li:hover,#header li.cur{background: #002b0a;}
+#header .share{position: absolute;right: 0px;height: 124px;top:0px;}
+
+#list{width: 100%;height: 36px;background: #000502;color:#003915;text-indent: 210px;line-height: 36px;}
+#list span{color:#4c675a;}
+
+.wrap img{width: 100%;}
+#section1{}

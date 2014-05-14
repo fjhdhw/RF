@@ -1,0 +1,74 @@
+<!DOCTYPE>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>PC端</title>
+    <link rel="alternate" type="application/vnd.wap.xhtml+xml" media="handheld" href="target"/>
+    <link rel="shortcut icon" href="http://www.lvmama.com/favicon.ico" type="image/x-icon" > 
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/pc.css">
+   <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+<body>
+  
+  <div id="header">
+  	<div class="logo"></div>
+  	<ul>
+  		<li>首页</li>
+  		<li>关于馥绿雅德</li>
+  		<li>产品系列</li>
+  		<li>最新消息</li>
+  		<li>专柜查询</li>
+  		<li>会员俱乐部</li>
+  	</ul>
+  	<div class="share">
+  		<div></div>
+  		<div></div>
+  		<div></div>
+  	</div>
+  	<div class="clear"></div>
+  	<div id="list">
+	  	关于馥绿德雅 > <span>品牌故事</span>
+	  </div> 
+  </div>
+
+  <div style="width:100%;height: 124px;"></div>
+	
+  <div class="wrap">
+  	<div id="section1">
+  		<img src="img/pc/bg1.jpg" />
+  	</div>
+  	<div id="section2">
+  		<img src="img/pc/bg2.png" />
+  	</div>
+  	<div id="section3">
+  		<img src="img/pc/bg3.png" />
+  	</div>
+  	<div id="section4">
+  		<img src="img/pc/bg4.png" />
+  	</div>
+  	<div id="section5">
+  		<img src="img/pc/bg5.png" />
+  	</div>
+  	<div id="section6">
+  		<img src="img/pc/bg6.png" />
+  	</div>
+  </div>
+
+  <div id="footer"></div>
+
+  <script type="text/javascript">
+  	function resize(){
+  		var _w = $("html").width();
+  		$("#section1").width(_w);
+  	}
+
+  	resize();
+
+  	window.onresize=function(){
+  		resize();
+  	}
+  </script>
+
+</body>
+</html>
