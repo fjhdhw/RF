@@ -1,6 +1,7 @@
-html{background: url(../img/pc/bg.jpg);background-size: cover;}
-body{min-width: 1024px;}
-#header{height: 160px;background: #000c04;position: fixed;line-height: 124px;width: 100%;min-width: 1024px;}
+html{height: 100%;overflow-x: hidden;min-height: 540px;}
+body{min-width: 1024px;height: 100%;}
+.allBg{background: url(../img/pc/bg.jpg);background-size: cover;position: fixed;width: 100%;height: 100%;z-index: 10;}
+#header{height: 160px;background: #000c04;position: fixed;line-height: 124px;width: 100%;min-width: 1024px;z-index: 1000;}
 #header .logo{background: url(../img/pc/icon.png);width: 205px;height: 124px;float:left;}
 #header ul{float:left;color:#44644b;}
 #header li{float:left;padding: 0 20px;}
@@ -10,5 +11,15 @@ body{min-width: 1024px;}
 #list{width: 100%;height: 36px;background: #000502;color:#003915;text-indent: 210px;line-height: 36px;}
 #list span{color:#4c675a;}
 
+.wrap{position: fixed;top:160px;z-index: 1000;}
 .wrap img{width: 100%;}
-#section1{}
+.wrap .wrapUp,.wrap .wrapDown{width: 100%;overflow: hidden;}
+
+#scrollTips{position: absolute;top:50%;left:50%;width: 100px;height: 100px;margin-left: -50px;margin-top: -50px;text-align: center;color:#fed972;font-size: 14px;cursor: pointer;}
+#scrollTips img{width:34px;height: 16px;margin-top: 5px;}
+
+.scrollTop{width: 100%;}
+.content{height: 6000px;position: relative;z-index: 90;}
+
+#title1{position: fixed;top:50%;left:50%;width: 583px;height: 139px;margin-top: 0;margin-left:-291px;z-index: 99;}
+#title2L,#title2R{position: fixed;width: 426px;height: 289px;z-index: 99;top:50%;margin-top: -50px;}

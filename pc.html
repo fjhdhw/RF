@@ -7,10 +7,10 @@
     <link rel="shortcut icon" href="http://www.lvmama.com/favicon.ico" type="image/x-icon" > 
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/pc.css">
-   <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+   <script src="http://libs.baidu.com/jquery/1.8.3/jquery.js"></script>
 </head>
 <body>
-  
+  <div class="allBg"></div>  
   <div id="header">
   	<div class="logo"></div>
   	<ul>
@@ -30,29 +30,41 @@
   	<div id="list">
 	  	关于馥绿德雅 > <span>品牌故事</span>
 	  </div> 
-  </div>
-
-  <div style="width:100%;height: 124px;"></div>
+  </div> 
 	
   <div class="wrap">
-  	<div id="section1">
-  		<img src="img/pc/bg1.jpg" />
-  	</div>
-  	<div id="section2">
-  		<img src="img/pc/bg2.png" />
-  	</div>
-  	<div id="section3">
-  		<img src="img/pc/bg3.png" />
-  	</div>
-  	<div id="section4">
-  		<img src="img/pc/bg4.png" />
-  	</div>
-  	<div id="section5">
-  		<img src="img/pc/bg5.png" />
-  	</div>
-  	<div id="section6">
-  		<img src="img/pc/bg6.png" />
-  	</div>
+  	<div class="wrapUp">
+      <img src="img/pc/scrollBgUp.png" data-0="margin-top:0" data-600="margin-top:-140" data-1200="margin-top:-140" data-1800="margin-top:-210" />
+    </div>
+    <div class="wrapDown" style="margin-top:-65px;">
+      <img src="img/pc/scrollBgDown.png" data-0="margin-top:0" data-600="margin-top:140" data-1200="margin-top:140" data-1800="margin-top:210" />
+    </div>
+
+    <div id="scrollTips" data-0="top:50%;opacity:1" data-600="top:100%" data-1800="opacity:0">
+      <p>scroll</p>
+      <p><img src="img/pc/arrowdown.png" /></p>
+    </div>
+  </div>
+
+  <div class="scrollContet">
+
+    <div class="scrollTop"></div>
+
+    <div class="content" style="color:#fff">
+      
+    </div>
+  </div>
+
+  <div id="title1" data-600="opacity:0" data-1200="opacity:1" data-1800="opacity:0">
+    <img src="img/pc/title1.png"  />
+  </div>
+
+  <div id="title2L" data-1800="opacity:0;left:-500px" data-2400="opacity:1;left:15%;" >
+    <img src="img/pc/title2left.png" style="width:300px;" />
+  </div>
+
+  <div id="title2R" style="margin-top:-140px;" data-1800="opacity:0;right:-500px" data-2400="opacity:1;right:10%;" >
+    <img src="img/pc/title2right.png" style="width:300px;" />
   </div>
 
   <div id="footer"></div>
@@ -60,7 +72,18 @@
   <script type="text/javascript">
   	function resize(){
   		var _w = $("html").width();
-  		$("#section1").width(_w);
+      var _h = $("html").height() - 160;
+      if(_w>1000){
+        $(".wrap").width(_w);
+        $(".scrollTop").height($("html").height());
+        $(".wrap .wrapUp img").width(_w);
+        $(".wrap .wrapDown img").width(_w);
+        $(".wrap .wrapUp").height(parseInt(_h/2)+30);
+        $(".wrap .wrapDown").height(parseInt(_h/2)+35);
+        $(".wrap .wrapUp img").height(parseInt(_h/2)+30);
+        $(".wrap .wrapDown img").height(parseInt(_h/2)+35);
+      }
+  		
   	}
 
   	resize();
@@ -70,5 +93,18 @@
   	}
   </script>
 
+  <script type="text/javascript" src="js/skrollr.min.js"></script>
+  <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+  <script type="text/javascript">
+    var s = skrollr.init({
+      edgeStrategy: 'set',
+      easing: {
+        WTF: Math.random,
+        inverted: function(p) {
+          return 1-p;
+        }
+      }
+    });
+  </script>
 </body>
 </html>
